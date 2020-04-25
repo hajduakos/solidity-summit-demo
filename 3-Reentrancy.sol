@@ -8,7 +8,6 @@ that the invariant does not hold before the external call. However, if the balan
 of the caller is first deducted, it no longer reports (false) alarms.
 
 Run with 'solc-verify.py 3-Reentrancy.sol'.
-
 */
 
 pragma solidity >=0.5.0;
