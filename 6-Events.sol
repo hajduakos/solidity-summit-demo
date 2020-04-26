@@ -1,11 +1,3 @@
-/*
-This is a storage contract, similar to 4-Modifications.sol, illustrating the specification
-possibilities for events.
-
-Run with 'solc-verify.py 6-Events.sol'.
-Note that this feature is not yet supported on the main branch.
-*/
-
 pragma solidity >=0.5.0;
 
 contract Storage {

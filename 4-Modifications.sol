@@ -1,11 +1,3 @@
-/*
-An example for a storage where users can add/update/clear their data (an integer).
-The owner can clear any data. This illustrates the fine-grained specification
-possibilities for annotating functions with the data they can modify.
-
-Run with 'solc-verify.py 4-Modifications.sol'.
-*/
-
 pragma solidity >=0.5.0;
 
 contract Storage {

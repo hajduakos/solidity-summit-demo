@@ -1,16 +1,3 @@
-/*
-An example for a simple fixed cap token with batch transfer functionality, illustrating
-the infamous overflow issue in the BEC Token.
-If SafeMath is not used, the multiplication in 'batchTransfer' can overflow, creating
-a large amount of tokens out of nowhere.
-
-Solc-verify can detect this issue. Furthermore, with invariants added, it can also
-prove functional properties (such as the total number of tokens is constant).
-
-Run with 'solc-verify.py 2-TokenBatch.sol'
-or with 'solc-verify.py 2-TokenBatch.sol --arithmetic mod-overflow' to check for overflows.
-*/
-
 pragma solidity >=0.5.0;
 
 /// @notice invariant __verifier_sum_uint(balances) == total
@@ -28,7 +15,7 @@ contract Token {
         require(0 < receivers.length && receivers.length <= 10, "");
         //uint amount = receivers.length * value; // Overflow
         uint amount = receivers.length.mul(value); // OK
-        require(balances[msg.sender] >= amount);
+        require(balances[msg.sender] >= amount, "Insufficient funds");
         balances[msg.sender] = balances[msg.sender].sub(amount);
 
         /// @notice invariant total == __verifier_sum_uint(balances) + (receivers.length - i) * value

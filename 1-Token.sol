@@ -1,13 +1,3 @@
-/*
-An example for a simple fixed cap token.
-The contract-level invariant ensures that the total amount of tokens is constant.
-However, this would still allow to swap the + and - operators in 'transfer',
-therefore extra postconditions are added.
-
-Run with 'solc-verify.py 1-Token.sol'
-or with 'solc-verify.py 1-Token.sol --arithmetic mod-overflow' to check for overflows.
-*/
-
 pragma solidity >=0.5.0;
 
 /// @notice invariant __verifier_sum_uint(balances) == total
