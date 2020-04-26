@@ -1,5 +1,5 @@
 /*
-An example for a storage where users can set/update/clear their data (an integer).
+An example for a storage where users can add/update/clear their data (an integer).
 The owner can clear any data. This illustrates the fine-grained specification
 possibilities for annotating functions with the data they can modify.
 
@@ -28,7 +28,7 @@ contract Storage {
     }
 
     /// @notice modifies entries[msg.sender] if !entries[msg.sender].set
-    function set(int data) public {
+    function add(int data) public {
         require(!entries[msg.sender].set, "");
         entries[msg.sender] = Entry(true, data);
     }
