@@ -3,7 +3,7 @@
 Examples for the [Solidity Summit 2020](https://solidity-summit.ethereum.org/) presentation titled _solc-verify: source-level formal verification for Solidity_.
 
 Running the examples requires [solc-verify](https://github.com/SRI-CSL/solidity) to be available (see [install instructions](https://github.com/SRI-CSL/solidity/blob/boogie/SOLC-VERIFY-README.md) or try the [Docker image](https://github.com/SRI-CSL/solidity/blob/boogie/docker/README.md)).
-During the demo, the latest version (commit [09941c0](https://github.com/SRI-CSL/solidity/commit/09941c0e68353ee99ff3d511ca2c1a989d00e1c8) at the time) was used.
+During the demo, the latest version (commit [2be98d6](https://github.com/SRI-CSL/solidity/commit/2be98d6f3474217aa9605fc1ec2932f1563fffe0) at the time) was used.
 
 For more information, take a look at the [readme](https://github.com/SRI-CSL/solidity/blob/boogie/SOLC-VERIFY-README.md) of solc-verify, our [tool paper](https://arxiv.org/abs/1907.04262), or our [paper](https://arxiv.org/abs/2001.03256) on formalizing reference types and the memory model.
 
@@ -56,7 +56,7 @@ usage of _quantifiers_ in specification.
 
 Run with `solc-verify.py 5-Quantifiers.sol`.
 Note that this feature is not yet supported on the main branch.
-At the demo, commit [afa0313](https://github.com/SRI-CSL/solidity/commit/afa03133b6c3b8f68f3f6e73b8e42d9ba7244fea) was used.
+At the demo, commit [2365707](https://github.com/SRI-CSL/solidity/commit/236570742c1ff9b6d25792b34c7ab7f972ac28ad) was used.
 
 ## 6-Events.sol
 This is a storage contract, similar to 4-Modifications.sol, illustrating the specification possibilities for events.
@@ -65,4 +65,4 @@ Furthermore, events can be specified _pre- and postconditions_.
 
 Run with `solc-verify.py 6-Events.sol`.
 Note that this feature is not yet supported on the main branch.
-At the demo, commit [afa0313](https://github.com/SRI-CSL/solidity/commit/afa03133b6c3b8f68f3f6e73b8e42d9ba7244fea) was used.
+At the demo, commit [2365707](https://github.com/SRI-CSL/solidity/commit/236570742c1ff9b6d25792b34c7ab7f972ac28ad) was used.
