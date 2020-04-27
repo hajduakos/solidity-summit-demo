@@ -7,6 +7,11 @@ During the demo, the latest version (commit [2be98d6](https://github.com/SRI-CSL
 
 For more information, take a look at the [readme](https://github.com/SRI-CSL/solidity/blob/boogie/SOLC-VERIFY-README.md) of solc-verify, our [tool paper](https://arxiv.org/abs/1907.04262), or our [paper](https://arxiv.org/abs/2001.03256) on formalizing reference types and the memory model.
 
+## 0-Basic.sol
+
+This is a basic example for a contract that keeps track of two values, `x` and `y`, which should always be equal (except of course during intermediate steps within a transaction).
+This can be formulated with a _contract-level invariant_.
+
 ## 1-Token.sol
 
 This is an example for a simple fixed cap token.
