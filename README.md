@@ -59,9 +59,9 @@ Furthermore, modifications can be restricted with additional conditions (e.g., `
 
 Run with `solc-verify.py 4-Modifications.sol`.
 
-Note that the private `set` function takes a local storage pointer, which can point to any entry within the contract so it declares `entries` as a whole for modifications.
-Furthermore, note that `update` calls `set`, which assigns the `.set` member but `update` should only modify `.data`.
-However, `update` requires the `.set` member to be true so solc-verify can prove that the `set` function does not really modify it with the assignment.
+Note that the private `setdata` function takes a local storage pointer, which can point to any entry within the contract so it declares `entries` as a whole for modifications.
+Furthermore, note that `update` calls `setdata`, which assigns the `.set` member but `update` should only modify `.data`.
+However, `update` requires the `.set` member to be true so solc-verify can prove that the `setdata` function does not really modify it with the assignment.
 
 ## Experimental features
 

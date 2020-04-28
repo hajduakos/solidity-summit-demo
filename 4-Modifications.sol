@@ -20,7 +20,7 @@ contract Storage {
     }
 
     /// @notice modifies entries
-    function set(Entry storage e, int data) private {
+    function setdata(Entry storage e, int data) private {
         e.set = true;
         e.data = data;
     }
@@ -29,14 +29,14 @@ contract Storage {
     function add(int data) public {
         require(!entries[msg.sender].set, "");
         Entry storage e = entries[msg.sender];
-        set(e, data);
+        setdata(e, data);
     }
 
     /// @notice modifies entries[msg.sender].data if entries[msg.sender].set
     function update(int data) public {
         require(entries[msg.sender].set, "");
         Entry storage e = entries[msg.sender];
-        set(e, data);
+        setdata(e, data);
     }
 
     /// @notice modifies entries[msg.sender]
