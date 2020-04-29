@@ -1,6 +1,6 @@
 pragma solidity >=0.5.0;
 
-/// @notice invariant x == y
+//
 contract Basic {
     int x;
     int y;

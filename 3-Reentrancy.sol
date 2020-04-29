@@ -8,7 +8,6 @@ contract Reentrancy {
         balances[msg.sender] += msg.value;
     }
 
-    /// @notice precondition msg.sender != address(this)
     function withdraw(uint amount) public {
         require(balances[msg.sender] >= amount, "Insufficient funds");
         (bool ok, ) = msg.sender.call.value(amount)("");

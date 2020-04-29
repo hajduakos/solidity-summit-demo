@@ -1,6 +1,6 @@
 pragma solidity >=0.5.0;
 
-/// @notice invariant __verifier_sum_uint(balances) == total
+//
 contract Token {
     using SafeMath for uint;
     uint total;
@@ -13,13 +13,12 @@ contract Token {
 
     function batchTransfer(address[] memory receivers, uint value) public {
         require(0 < receivers.length && receivers.length <= 10, "");
-        //uint amount = receivers.length * value; // Overflow
-        uint amount = receivers.length.mul(value); // OK
+        uint amount = receivers.length * value;
         require(balances[msg.sender] >= amount, "Insufficient funds");
         balances[msg.sender] = balances[msg.sender].sub(amount);
 
-        /// @notice invariant total == __verifier_sum_uint(balances) + (receivers.length - i) * value
-        /// @notice invariant i <= receivers.length
+        //
+        //
         for (uint i = 0; i < receivers.length; i++) {
             balances[receivers[i]] = balances[receivers[i]].add(value);
         }
