@@ -1,6 +1,7 @@
 # Solidity Summit Demo
 
 Examples for the [Solidity Summit 2020](https://solidity-summit.ethereum.org/) presentation titled _solc-verify: source-level formal verification for Solidity_.
+See [slides](slides.pdf) and the [recording](https://www.youtube.com/watch?v=lhjo2FuU4v0&t=3654) of the talk.
 
 Running the examples requires [solc-verify](https://github.com/SRI-CSL/solidity) to be available (see [install instructions](https://github.com/SRI-CSL/solidity/blob/boogie/SOLC-VERIFY-README.md) or try the [Docker image](https://github.com/SRI-CSL/solidity/blob/boogie/docker/README.md)).
 During the demo, the latest version (commit [4fee04a](https://github.com/SRI-CSL/solidity/commit/4fee04a18ce7471d96ba97db39285c630a7d8357) at the time) was used.
